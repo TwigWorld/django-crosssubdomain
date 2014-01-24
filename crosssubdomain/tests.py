@@ -35,20 +35,22 @@ class MenuTestCase(test.TestCase):
 
     def test_without_domain(self):
 
-        request = test.RequestFactory()
-        context = context_processors.document_domain(request)
+        with self.settings(JS_DOCUMENT_DOMAIN=None):
 
-        self.assertEquals(
-            context['js_document_domain'],
-            None
-        )
+            request = test.RequestFactory()
+            context = context_processors.document_domain(request)
 
-        self.assertEquals(
-            self.get_template.render(self.context),
-            ''
-        )
+            self.assertEquals(
+                context['js_document_domain'],
+                None
+            )
 
-        self.assertEquals(
-            self.set_template.render(self.context),
-            ''
-        )
+            self.assertEquals(
+                self.get_template.render(self.context),
+                ''
+            )
+
+            self.assertEquals(
+                self.set_template.render(self.context),
+                ''
+            )

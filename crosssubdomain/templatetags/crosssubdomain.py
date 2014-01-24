@@ -3,7 +3,8 @@ from django.conf import settings
 
 
 def get_document_domain():
-    return getattr(settings, 'JS_DOCUMENT_DOMAIN', '')
+    domain = getattr(settings, 'JS_DOCUMENT_DOMAIN', None)
+    return domain if domain is not None else ''
 
 
 def set_document_domain():

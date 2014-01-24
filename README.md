@@ -62,7 +62,7 @@ Provides the JS_DOCUMENT_DOMAIN setting as a string (or None).
 
 ```html
 
-{% get_document_domain %}  <!-- 'djangoproject.com' -->
+{% get_document_domain %}  <!-- djangoproject.com -->
 
 ```
 
