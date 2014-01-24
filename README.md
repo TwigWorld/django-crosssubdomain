@@ -74,6 +74,6 @@ element directly into the DOM.
 
 ```html
 
-{% set_document_domain %} <!-- <script type="text/javascript">document.domain="djangoproject.com";</script>
+{% set_document_domain %} <!-- <script type="text/javascript">document.domain="djangoproject.com";</script> -->
 
 ```
