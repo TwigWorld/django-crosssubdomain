@@ -60,8 +60,20 @@ The following template tags are available:
 
 Provides the JS_DOCUMENT_DOMAIN setting as a string (or None).
 
+```html
+
+{% get_document_domain %}  <!-- 'djangoproject.com' -->
+
+```
+
 
 ##set_document_domain
 
 If JS_DOCUMENT_DOMAIN is set, then this tag will insert the necessary script
 element directly into the DOM.
+
+```html
+
+{% set_document_domain %} <!-- <script type="text/javascript">document.domain="djangoproject.com";</script>
+
+```
