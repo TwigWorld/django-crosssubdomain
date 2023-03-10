@@ -11,6 +11,12 @@ setup(
     description='A small Django application for providing templates with a document.domain setting for cross-subdomain JS',
     long_description=open('README.md').read(),
     install_requires=[
-        "Django >= 1.4"
+        "Django<3"
     ],
+    extras_require={
+        "testing": [
+            "pytest",
+            "pytest-django"
+        ]
+    },
 )
