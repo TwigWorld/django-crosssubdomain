@@ -1,7 +1,7 @@
 from django import test
 from django.template import Template, Context
 
-import context_processors
+from crosssubdomain import context_processors
 
 
 class MenuTestCase(test.TestCase):

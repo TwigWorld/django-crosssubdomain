@@ -1,5 +1,6 @@
 from django import template
 from django.conf import settings
+from django.utils.html import mark_safe
 
 
 def get_document_domain():
@@ -10,9 +11,9 @@ def get_document_domain():
 def set_document_domain():
     domain = get_document_domain()
     if domain != '':
-        return u'<script type="text/javascript">document.domain="{domain}";</script>'.format(
+        return mark_safe(u'<script type="text/javascript">document.domain="{domain}";</script>'.format(
             domain=domain
-        )
+        ))
     return ''
 
 
