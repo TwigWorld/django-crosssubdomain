@@ -1,4 +1,5 @@
 from distutils.core import setup
+
 from setuptools import find_packages
 
 setup(
@@ -11,5 +12,14 @@ setup(
     description="A small Django application for providing templates with a document.domain setting for cross-subdomain JS",
     long_description=open("README.md").read(),
     install_requires=["Django<3"],
-    extras_require={"testing": ["pytest", "pytest-django", "black", ]},
+    extras_require={
+        "testing": [
+            "pytest",
+            "pytest-django",
+            "black",
+            "isort",
+            "pre-commit",
+            "check_pdb_hook",
+        ]
+    },
 )
