@@ -12,14 +12,14 @@ def pytest_configure(config):
         INSTALLED_APPS=["crosssubdomain"],
         TEMPLATES=[
             {
-                'BACKEND': 'django.template.backends.django.DjangoTemplates',
-                'APP_DIRS': True,
-                'OPTIONS': {
-                    'context_processors': [
-                        'crosssubdomain.context_processors.document_domain',
+                "BACKEND": "django.template.backends.django.DjangoTemplates",
+                "APP_DIRS": True,
+                "OPTIONS": {
+                    "context_processors": [
+                        "crosssubdomain.context_processors.document_domain",
                     ],
                     "debug": True,  # We want template errors to raise
-                }
+                },
             },
         ],
     )

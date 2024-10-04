@@ -4,17 +4,17 @@ from django.utils.html import mark_safe
 
 
 def get_document_domain():
-    domain = getattr(settings, 'JS_DOCUMENT_DOMAIN', None)
-    return domain if domain is not None else ''
+    domain = getattr(settings, "JS_DOCUMENT_DOMAIN", None)
+    return domain if domain is not None else ""
 
 
 def set_document_domain():
     domain = get_document_domain()
-    if domain != '':
-        return mark_safe(u'<script type="text/javascript">document.domain="{domain}";</script>'.format(
-            domain=domain
-        ))
-    return ''
+    if domain != "":
+        return mark_safe(
+            f'<script type="text/javascript">document.domain="{domain}";</script>'
+        )
+    return ""
 
 
 register = template.Library()
